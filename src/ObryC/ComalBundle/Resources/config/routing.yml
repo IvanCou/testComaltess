@@ -1,0 +1,8 @@
+obry_c_comal_homepage:
+    path:     /
+    defaults: { _controller: ObryCComalBundle:Home:index }
+
+obry_c_comal_contactus:
+    path:     /contact
+    defaults: { _controller: ObryCComalBundle:Contact:index }
+   

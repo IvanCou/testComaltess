@@ -1,0 +1,3 @@
+obry_c_comal:
+    resource: "@ObryCComalBundle/Resources/config/routing.yml"
+    prefix:   /

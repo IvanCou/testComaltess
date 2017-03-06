@@ -1,0 +1,11 @@
+{% extends "ObryCComalBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+  <h2>Cette page sert à nous contacter</h2>  
+  {{ include("ObryCComalBundle:Contact:form.html.twig")}}  
+    
+  <hr/>
+
+{% endblock %}

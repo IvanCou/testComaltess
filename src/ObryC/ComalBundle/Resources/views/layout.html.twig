@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}Test Plateforme{% endblock %}</title>
+
+  {% block stylesheets %}    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  {% endblock %}
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ path('obry_c_comal_homepage') }}">Lorem site</a>
+        </div>	  
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">            
+            <li class="{% if app.request.attributes.get('_route') == 'obry_c_comal_homepage' %}active{% endif %}"><a href="{{ path('obry_c_comal_homepage') }}">Accueil</a></li>
+            <li class="{% if app.request.attributes.get('_route') == 'obry_c_comal_contactus' %}active{% endif %}"><a href="{{ path('obry_c_comal_contactus') }}">Nous contacter</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+   <div class="container theme-showcase" role="main">
+		<br/>
+		<div class="page-header">
+			<h1>Lorem ipsum</h1>
+		</div>
+   
+		{% block body %}
+		{% endblock %}
+
+		<footer>
+		  <p>Obry Clément © {{ 'now'|date('Y') }}</p>
+		</footer>
+	</div>
+
+  {% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  {% endblock %}
+
+</body>
+</html>
